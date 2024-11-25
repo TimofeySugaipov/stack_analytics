@@ -1,0 +1,12 @@
+
+version: 2
+
+models:
+  - name: logs_posts_questions
+    description: "A partitioned and clustered table for post questions, with only relevant fields"
+  
+  - name: logs_posts_answers
+    description: "A partitioned and clustered table for post answers, with only relevant fields"
+  
+  - name: logs_posts_votes
+    description: "A partitioned and clustered table for votes"
