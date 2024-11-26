@@ -1,7 +1,7 @@
 {{ config(
       materialized='table'
     , partition_by= {
-        "field": "creation_dt"
+        "field": "vote_dt"
       , "data_type": "date"
       , "granularity": "month"
     }
@@ -14,8 +14,8 @@
 */
 
 SELECT id AS vote_id
-     , DATE(creation_date) AS creation_dt
+     , DATE(creation_date) AS vote_dt
      , post_id
      , vote_type_id
 
-FROM `bigquery-public-data.stackoverflow.votes`
+FROM {{ source('raw_logs', 'votes') }}

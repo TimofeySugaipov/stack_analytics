@@ -16,6 +16,7 @@
 SELECT id AS question_id
      , owner_user_id
      , post_type_id
+     , accepted_answer_id
      , DATE(creation_date) AS creation_dt
      , DATE(last_activity_date) AS last_activity_dt
      , title
@@ -27,4 +28,4 @@ SELECT id AS question_id
      , score AS n_votes
      , view_count AS n_views
 
-FROM `bigquery-public-data.stackoverflow.posts_questions`
+FROM {{ source('raw_logs', 'posts_questions') }}

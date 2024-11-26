@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: raw_logs
+    database: bigquery-public-data
+    schema: stackoverflow
+    tables:
+      - name: posts_questions
+        description: "Raw logs for posts that are questions"
+      - name: posts_answers
+        description: "Raw logs for posts that are answers"
+      - name: votes
+        description: "Raw logs for votes"

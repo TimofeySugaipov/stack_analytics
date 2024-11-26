@@ -23,4 +23,4 @@ SELECT id AS answer_id
      , comment_count AS n_comments
      , score AS n_votes
 
-FROM `bigquery-public-data.stackoverflow.posts_answers`
+FROM {{ source('raw_logs', 'posts_answers') }}
