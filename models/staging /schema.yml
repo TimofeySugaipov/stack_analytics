@@ -1,0 +1,10 @@
+
+version: 2
+
+models:
+  - name: stg_post_voting_activity_daily
+    description: "Staging table for daily voting activity on posts"
+  
+  - name: stg_question_metric_benchmarks_yearlt
+    description: "Staging table for yearly metric benchmarks on questions, these are used to flag popular questions"
+
