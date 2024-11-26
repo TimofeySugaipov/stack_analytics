@@ -1,0 +1,20 @@
+
+version: 2
+
+models:
+  - name: dim_questions
+    description: "Dimension table for questions"
+    columns:
+      - name: question_id
+        description: "Unique identifier for a question"
+        tests:
+          - unique
+          - not_null
+
+  - name: f_question_voting_activity_daily
+    description: "Fact table for daily voting activity on questions, this table is the main way we can track daily activity on questions"
+    columns:
+      - name: vote_dt
+        description: "Date of the activity"
+        tests:
+          - not_null
